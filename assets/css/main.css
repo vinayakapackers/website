@@ -288,13 +288,11 @@ section {
   transition: all 0.5s;
   z-index: 997;
   padding: 30px 0;
-  background-image: linear-gradient(to bottom, #0E1D34, rgba(14, 29, 52, 0));
 }
 
 .header.sticked {
-  background: rgba(14, 29, 52, 0.9);
+  background-image: linear-gradient(to bottom, #0E1D34, rgba(14, 29, 52, 0));
   padding: 15px 0;
-  box-shadow: 0px 2px 20px rgba(14, 29, 52, 0.1);
 }
 
 .header .logo img {
@@ -1776,9 +1774,16 @@ section {
   color: white;
 }
 
+.footer .footer-info {
+  display: flex;
+  flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+  align-items: center;
+}
+
 .footer .footer-info .logo {
   line-height: 0;
   margin-bottom: 25px;
+  align-items: center;
 }
 
 .footer .footer-info .logo img {
@@ -1787,12 +1792,25 @@ section {
 }
 
 .footer .footer-info .logo span {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 700;
   letter-spacing: 1px;
   color: #fff;
   font-family: var(--font-primary);
 }
+
+@media (min-width:970px) and (max-width: 1200px) {
+  .footer .footer-info .logo span {
+    font-size: 20px; /* Adjust as needed for smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .footer .footer-info .logo span {
+    font-size: 16px; /* Adjust as needed for smaller screens */
+  }
+}
+
 
 .footer .footer-info p {
   font-size: 14px;
@@ -1884,3 +1902,4 @@ section {
 .hover-effect:hover {
   color: blue;
 }
+
